@@ -16,7 +16,7 @@ class FilmControllerTest {
         Film film1 = new Film(null, "name", "description",
                 LocalDate.of(1978, 10, 4), 30);
         Film film2 = new Film(null, "name", "description",
-                LocalDate.of(1977, 10, 4), 30);
+                LocalDate.of(1978, 10, 4), 30);
         Film film3 = new Film(null, "name", "description",
                 LocalDate.of(1979, 10, 4), 30);
 
