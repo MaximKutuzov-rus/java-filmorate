@@ -37,7 +37,7 @@ public class UserController {
                 log.error("Ошибка валидации, имейл пустой или без знака @");
                 throw new ValidationException("Имейл не может быть пустой строкой и должен содержать знак @");
             }
-            if(user.getLogin().contains(" ") || user.getLogin().isBlank()) {
+            if (user.getLogin().contains(" ") || user.getLogin().isBlank()) {
                 log.error("Ошибка валидации, логин пустой или содержит пробелы");
                 throw new ValidationException("Логин не может быть пустым и содержать пробелы");
             }
