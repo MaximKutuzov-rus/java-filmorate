@@ -10,9 +10,9 @@ import java.time.LocalDate;
 @EqualsAndHashCode(exclude = "id")
 @AllArgsConstructor
 public class Film {
-    Long id;
-    String name;
-    String description;
-    LocalDate releaseDate;
-    Integer duration;
+    private Long id;
+    private String name;
+    private String description;
+    private LocalDate releaseDate;
+    private Integer duration;
 }

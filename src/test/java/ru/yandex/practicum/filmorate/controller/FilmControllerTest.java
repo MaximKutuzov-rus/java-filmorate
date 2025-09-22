@@ -24,7 +24,7 @@ class FilmControllerTest {
         controller.addFilm(film2);
         controller.addFilm(film3);
 
-        List<Film> allFilms = controller.allFilms().stream().toList();
+        List<Film> allFilms = controller.allFilms();
         Assertions.assertEquals(film1, allFilms.getFirst());
         Assertions.assertEquals(film3, allFilms.getLast());
     }

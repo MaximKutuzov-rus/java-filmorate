@@ -24,7 +24,7 @@ class UserControllerTest {
         controller.addUser(user2);
         controller.addUser(user3);
 
-        List<User> allFilms = controller.allUsers().stream().toList();
+        List<User> allFilms = controller.allUsers();
         Assertions.assertEquals(user1, allFilms.getFirst());
         Assertions.assertEquals(user3, allFilms.getLast());
     }

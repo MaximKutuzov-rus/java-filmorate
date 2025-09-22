@@ -6,7 +6,7 @@ import ru.yandex.practicum.filmorate.exceptions.ValidationException;
 import ru.yandex.practicum.filmorate.model.User;
 
 import java.time.LocalDate;
-import java.util.Collection;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,7 +14,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/users")
 public class UserController {
-    Map<Long, User> users = new HashMap<>();
+    private final Map<Long, User> users = new HashMap<>();
 
     private long getNextId() {
         long currentMaxId = users.keySet()
@@ -26,8 +26,8 @@ public class UserController {
     }
 
     @GetMapping
-    public Collection<User> allUsers() {
-        return users.values();
+    public ArrayList<User> allUsers() {
+        return new ArrayList<>(users.values());
     }
 
     @PostMapping

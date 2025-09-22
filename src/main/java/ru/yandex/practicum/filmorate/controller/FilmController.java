@@ -6,16 +6,14 @@ import ru.yandex.practicum.filmorate.exceptions.ValidationException;
 import ru.yandex.practicum.filmorate.model.Film;
 
 import java.time.LocalDate;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @Slf4j
 @RestController
 @RequestMapping("/films")
 public class FilmController {
 
-    Map<Long, Film> films = new HashMap<>();
+    private final Map<Long, Film> films = new HashMap<>();
 
     private long getNextId() {
         long currentMaxId = films.keySet()
@@ -27,8 +25,8 @@ public class FilmController {
     }
 
     @GetMapping
-    public Collection<Film> allFilms() {
-        return films.values();
+    public List<Film> allFilms() {
+        return new ArrayList<>(films.values());
     }
 
     @PostMapping
